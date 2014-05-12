@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <title>Veiligheidsinformatie per land</title>
+    <script type="text/javascript" src="modernizr.custom.79639.js"></script>
+    <script src="jquery-2.1.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar">
+            <ul>
+                <li><a href="PIndex.html">Home</a></li>
+                <li><a href="HBO_Vragenlijst.html">Accident</a></li>
+                <li><a href="Landinformatie.html">Safety when travelling</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="swipe-area"></div>
+            <a href="#" data-toggle=".container" id="sidebar-toggle" class= "svg">
+                    <object id="menuarrow" data="../img/Menubutton.svg" alt = "menubutton" type="image/svg+xml">
+                    </object>
+            </a>
+            <div class="content">
+                <h1 id="h1">Select a country below</h1>
+                <div id="dd" class="wrapper-dropdown" tabindex="1">
+                    <span>Country</span>
+                    <ul class="dropdown">
+                        <li><a href="veiligheidsinformatie.html">France</a></li>
+                        <li><a href="#">Germany</a></li>
+                        <li><a href="italia.html">Italy</a></li>
+                        <li><a href="#">England</a></li>
+                    </ul>
+                </div>
+                <div id="nextButton">
+                    <a href = "veiligheidsinformatie.html" id="nextbutton" class="svg"> 
+                    <object data="../img/nextbuttonWhite.svg" type="image/svg+xml"></object>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript">
+			
+			function DropDown(el) {
+				this.dd = el;
+				this.placeholder = this.dd.children('span');
+				this.opts = this.dd.find('ul.dropdown > li');
+				this.val = '';
+				this.index = -1;
+				this.initEvents();
+			}
+			DropDown.prototype = {
+				initEvents : function() {
+					var obj = this;
+
+					obj.dd.on('click', function(event){
+						$(this).toggleClass('active');
+						return false;
+					});
+
+					obj.opts.on('click',function(){
+						var opt = $(this);
+						obj.val = opt.text();
+						obj.index = opt.index();
+						obj.placeholder.text(obj.val);
+					});
+				},
+				getValue : function() {
+					return this.val;
+				},
+				getIndex : function() {
+					return this.index;
+				}
+			}
+
+			$(function() {
+
+				var dd = new DropDown( $('#dd') );
+
+				$(document).click(function() {
+					// all dropdowns
+					$('.wrapper-dropdown-1').removeClass('active');
+				});
+
+			});
+        
+        <!--swipe menu-->
+            $(document).ready(function() {
+                $("[data-toggle]").click(function() {
+                    var toggle_el = $(this).data("toggle");
+                    $(toggle_el).toggleClass("open-sidebar");
+                });
+            });
+         
+        $(".swipe-area").swipe({
+            swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                {
+                    if (phase=="move" && direction =="right") {
+                         $(".container").addClass("open-sidebar");
+                         return false;
+                    }
+                    if (phase=="move" && direction =="left") {
+                         $(".container").removeClass("open-sidebar");
+                         return false;
+                    }
+                }
+        });
+		</script>
+	</body>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>FAQ</title>
+    <link style="text/css" rel="stylesheet" href="css.css">
+    <script src="jquery-2.1.0.min.js"></script> 
+    <script language="javascript" type="text/javascript">
+        function showHideDiv(id){
+  var obj = document.getElementById(id);
+    if (obj.style.display=="none"){
+      obj.style.display='block';
+    } else if(obj.style.display=="block"){
+      obj.style.display='none';
+    }
+}
+        
+$(document).ready(function() {
+  $("[data-toggle]").click(function() {
+    var toggle_el = $(this).data("toggle");
+    $(toggle_el).toggleClass("open-sidebar");
+  });
+     
+});
+ 
+$(".swipe-area").swipe({
+    swipeStatus:function(event, phase, direction, distance, duration, fingers)
+        {
+            if (phase=="move" && direction =="right") {
+                 $(".container").addClass("open-sidebar");
+                 return false;
+            }
+            if (phase=="move" && direction =="left") {
+                 $(".container").removeClass("open-sidebar");
+                 return false;
+            }
+        }
+});
+</script>
+</head>
+<body>
+    <div class="container">
+    <div id="sidebar">
+        <ul>
+                <li><a href="PIndex.html">Home</a></li>
+                <li><a href="HBO_Vragenlijst.html">Accident</a></li>
+                <li><a href="Landinformatie.html">Safety when travelling</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="swipe-area"></div>
+        <a href="#" data-toggle=".container" id="sidebar-toggle" class= "svg">
+                <object id="menuarrow" data="../img/Menubutton.svg" alt = "menubutton" type="image/svg+xml">
+                </object>
+        </a>
+        <div class="content">
+    <div id="topics">
+    <h1 id="faq">FAQ</h1>
+    <a href="#" onclick="showHideDiv('div-1')">Weather</a></br>
+        <div class="content2" id="div-1" style="display:none;">
+	Q.Is driving in the rain alsways dangerous?</br>
+    A. When it's raining, you should always be careful, but be especially careful with the first rain. Road oil and mud have not yet been washed off, making the road extra slippery.
+        </div>
+    <a href="#" onclick="showHideDiv('div-2')">French traffic network </a></br>
+    <div  id="div-2" style="display:none;">
+	Q. As a motorcyclist, can is filter through slow-moving traffic?</br>
+        A. No, this is illegal in France. Slipping through slow-moving or stationary traffic will cost you.</br>
+</div>
+    <a href="#" onclick="showHideDiv('div-3')">Going to France</a></br>
+    <div class="content2" id="div-3" style="display:none;">
+	Q. How do I travel the fastest through France?</br>
+        A. When travelling through France it's the best to avoid Paris, unless that's your destination. You can use the A26 motorway to go to the south.</br></br>
+    Q. When are motorways the most occupied?</br>
+    A. On Saturdays between July 10th and August 30th it is highly recommended to avoid travelling, since roads are extremely occupied. However, outside of this period, travelling on Saturday and Sunday is a good decision since trucks are banned.</br></br>
+    Q. Is carrying a breathalyzer with you abligatory in France?</br>
+    A. Yes, since April 2013 a new law in France states that everybody should carry a breathalyzer with him. 
+</div>
+    </div>
+    <a href="veiligheidsinformatie.html" class = "svg" id="bb2"><object id="backbutton" data="../img/backbuttonWhite.svg" type="image/svg+xml">
+                </object></a>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

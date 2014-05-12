@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link style="text/css" rel="stylesheet" href="css.css">
+    <title>Send picture</title>
+    <script src="jquery-2.1.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class= "navi" id= "navi3"><p id="involved3">Involved</p></div><div class = "nav" id = "nav3"><p id="damage3">Damage done</p></div>         <div class = "nv" id="nv3"><p id="image3">Insurance</p></div>
+        <div id="sidebar">
+            <ul>
+                <li><a href="PIndex.html">Home</a></li>
+                <li><a href="HBO_Vragenlijst.html">Accident</a></li>
+                <li><a href="Landinformatie.html">Safety when travelling</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="swipe-area"></div>
+            <a href="#" data-toggle=".container" id="sidebar-toggle" class= "svg">
+                    <object id= "menuarrow" data="../img/Menubutton.svg" alt = "menubutton" type="image/svg+xml" >
+                    </object>
+            </a>
+            <div class="content">
+            <div id="picture">
+                <object id = "upload" data="../img/uploadArrow.svg" type="image/svg+xml"></object>
+                <p id="textupload">Upload a picture of the vehicle and the insurance papers</p>
+                <a href= "verzonden.html" class = "svg" id="sent"><object id ="send" data="../img/SendMail.svg" type="image/svg+xml"></object></a>
+            </div>
+                <a href="beschadigd.html" class = "svg" id="bb"><object id="backbutton" data="../img/backbuttonWhite.svg" type="image/svg+xml">
+                </object></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+  $("[data-toggle]").click(function() {
+    var toggle_el = $(this).data("toggle");
+    $(toggle_el).toggleClass("open-sidebar");
+  });
+     
+});
+ 
+$(".swipe-area").swipe({
+    swipeStatus:function(event, phase, direction, distance, duration, fingers)
+        {
+            if (phase=="move" && direction =="right") {
+                 $(".container").addClass("open-sidebar");
+                 return false;
+            }
+            if (phase=="move" && direction =="left") {
+                 $(".container").removeClass("open-sidebar");
+                 return false;
+            }
+        }
+});
+</script>
+</body>
+</html>

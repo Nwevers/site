@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link style="text/css" rel="stylesheet" href="css.css">
+    <title>Beschadigd</title>
+    <script src="jquery-2.1.0.min.js"></script>
+    <script type="text/javascript">
+		function swap(){
+			var temp = document.getElementById('back').src;
+			document.getElementById('back').src = "../img/backmotodamageds.png";
+		}
+        
+        function swap2(){
+			var temp = document.getElementById('moto').src;
+			document.getElementById('moto').src = "../img/motordamaged.png";
+		}
+        
+        function swap3(){
+			var temp = document.getElementById('voorvork').src;
+			document.getElementById('voorvork').src = "../img/voorvorkdamaged.png";
+		}
+        
+        function swap4(){
+			var temp = document.getElementById('front').src;
+			document.getElementById('front').src = "../img/Voorwieldamaged.png";
+		}
+	</script>
+</head>
+<body>
+    <div class="container">
+    <div class= "navi" id= "navi2"><p id="involved2">Involved</p></div><div class = "nav" id = "nav2"><p id="damage2">Damage done</p></div><div class = "nv" id="nv2"><p id="image2">upload image</p></div>
+        <div id="sidebar">
+            <ul>
+                <li><a href="PIndex.html">Home</a></li>
+                <li><a href="HBO_Vragenlijst.html">Accident</a></li>
+                <li><a href="Landinformatie.html">Safety when travelling</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="swipe-area"></div>
+            <a href="#" data-toggle=".container" id="sidebar-toggle" class= "svg">
+                    <object id="menuarrow" data="../img/Menubutton.svg" alt = "menubutton" type="image/svg+xml" >
+                    </object>
+            </a>
+            <div class="content">
+            <h1 id="titleDamage">Where did your vehicle get damaged?</h1>
+                <div id="motor">
+                    <img class= "beschadigd" id="back" src="../img/backmoto.png" onclick= "swap()" />
+                    <img class= "beschadigd" id="moto" src="../img/motor.png" onclick= "swap2()"/>
+                    <img class= "beschadigd" id="voorvork" src="../img/voorvork.png" onclick= "swap3()"/>
+                    <img class= "beschadigd" id="front" src="../img/Voorwiel.png" onclick= "swap4()"/>
+                    </div>
+                <a href="upload.html" id="nextbutton" class= "svg">
+                <object data="../img/nextbuttonWhite.svg" type="image/svg+xml">
+                </object>
+                </a>
+            </div>
+        </div>
+    </div>
+        
+    <script>
+            $(document).ready(function() {
+                $("[data-toggle]").click(function() {
+                    var toggle_el = $(this).data("toggle");
+                    $(toggle_el).toggleClass("open-sidebar");
+                });
+            });
+         
+        $(".swipe-area").swipe({
+            swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                {
+                    if (phase=="move" && direction =="right") {
+                         $(".container").addClass("open-sidebar");
+                         return false;
+                    }
+                    if (phase=="move" && direction =="left") {
+                         $(".container").removeClass("open-sidebar");
+                         return false;
+                    }
+                }
+        });
+    </script>
+</body>
+</html>

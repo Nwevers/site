@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Veiligheidsinformatie</title>
+    <link style="text/css" rel="stylesheet" href="css.css">
+    <script src="jquery-2.1.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar">
+            <ul>
+                <li><a href="PIndex.html">Home</a></li>
+                <li><a href="HBO_Vragenlijst.html">Accident</a></li>
+                <li><a href="Landinformatie.html">Safety when travelling</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="swipe-area"></div>
+            <a href="#" data-toggle=".container" id="sidebar-toggle" class= "svg">
+                    <object id="menuarrow" data="../img/Menubutton.svg" alt = "menubutton" type="image/svg+xml">
+                    </object>
+            </a>
+            <div class="content">
+                <div id="icons">
+                    <a href="#pop1"><img id="sun" alt="cloud behind sun icon" src= "../img/sunIconWhite.png" width: "300" height: "300"/></a><p id="weather">Weather</p>
+                    <div id="pop1" class="pop-up">
+                        <div class="popBox">
+                            <div class="popScroll">
+                                <h2>Weather</h2>
+                                <p>Summer: 24° average, 15° average at night.</br></br>Winter: 2° and below average.</br></br>Do not drive your motorcycle when it's snowing. </p>
+                                <a href="FAQ.html" class="faq">More info</a>
+                            </div>
+                            <a href="" class="close"><span>Close</span></span></a>
+                        </div>
+                    </div>
+                    <a href="#pop2"><img id="bycicle" alt= "cyclist icon" src="../img/curved-road.png" /></a>
+                    <p id="roads">Roads and safety</p>  
+                    <div id="pop2" class="pop-up">
+                            <div class="popBox">
+                                <div class="popScroll">
+                                    <h2>Roads and safety</h2>
+                                    <p>France has an excellent road and motorway network.</br></br>Speed limit on motorways is 130 Km/H (110 Km/H. in rain and on divided highways)</br></br>Speed limit on main roads is 90 Km/H and 50 Km/H in built-up areas. (unless otherwise indicated.)</p>
+                                     <a href="FAQ.html" class="faq">More info</a>
+                                </div>
+                                <a href="" class="close"><span>Close</span></span></a>
+                            </div>
+                        </div>    
+                </div>
+                    <a href="Landinformatie.html" class = "svg" id="bb"><object id="backbutton" data="../img/backbuttonWhite.svg" type="image/svg+xml">
+                </object></a>
+            </div>
+        </div>
+    </div>
+<script>$(document).ready(function() {
+                $("[data-toggle]").click(function() {
+                    var toggle_el = $(this).data("toggle");
+                    $(toggle_el).toggleClass("open-sidebar");
+                });
+            });
+         
+        $(".swipe-area").swipe({
+            swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                {
+                    if (phase=="move" && direction =="right") {
+                         $(".container").addClass("open-sidebar");
+                         return false;
+                    }
+                    if (phase=="move" && direction =="left") {
+                         $(".container").removeClass("open-sidebar");
+                         return false;
+                    }
+                }
+        });
+		</script>
+</body>
+</html>

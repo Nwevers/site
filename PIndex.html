@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Safe Travel - home</title>
+    <link style="text/css" rel="stylesheet" href="css.css">
+    <script src="jquery-2.1.0.min.js"></script> 
+</head>
+<body>
+    <div class="container">
+    <div id="sidebar">
+        <ul>
+                <li><a href="HBO_Vragenlijst.html">Accident</a></li>
+                <li><a href="Landinformatie.html">Safety when travelling</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="swipe-area"></div>
+        <a href="#" data-toggle=".container" id="sidebar-toggle" class= "svg">
+                <object id="menuarrow" data="../img/Menubutton.svg" alt = "menubutton" type="image/svg+xml">
+                </object>
+        </a>
+        <div class="content">
+            <img alt= "logo AXA" id="axa" src="../img/ING_logo.png"/>
+            <h1 id="safetravel">Safe Travel</h1>
+            <div id="tip"></div>
+        <script>
+            (function() {
+              var quotes = [
+                {
+                    text: "After an incident it's wise to have your chassis measured to make sure it isn't damaged or bent"
+                },
+                {
+                    text: "When driving long distances it's best to change your tires regularly."
+                },
+                { 
+                    text: "Always indicate to other drivers what you are doing." 
+                },  
+                {
+                    text: "It's important to wear safety clothes in stead of jeans and a T-shirt."    
+                },
+                {
+                    text: "Make sure you have your chassis measured after a small accident to make sure it isn't bent."
+                },
+                {
+                    text: "When turning in the rain, keep your motorcycle as straight up as possible to get more grip on the road."
+                }
+                
+              ];
+              var quote = quotes[Math.floor(Math.random() * quotes.length)];
+              document.getElementById("tip").innerHTML =
+                '<p>' + quote.text + '</p>';
+            })();
+        </script>
+        </div>
+    </div>
+</div>
+    
+    <script>
+        $(document).ready(function() {
+  $("[data-toggle]").click(function() {
+    var toggle_el = $(this).data("toggle");
+    $(toggle_el).toggleClass("open-sidebar");
+  });
+     
+});
+ 
+$(".swipe-area").swipe({
+    swipeStatus:function(event, phase, direction, distance, duration, fingers)
+        {
+            if (phase=="move" && direction =="right") {
+                 $(".container").addClass("open-sidebar");
+                 return false;
+            }
+            if (phase=="move" && direction =="left") {
+                 $(".container").removeClass("open-sidebar");
+                 return false;
+            }
+        }
+});
+</script>
+    
+    
+</body>
+</html>

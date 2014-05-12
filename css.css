@@ -1,0 +1,1252 @@
+
+@media screen and (max-width: 2000px){
+
+/************************************************************GENERAL********************************************************************/
+body, html{
+    height: 100%;
+    margin: 0;
+    overflow:hidden;
+    font-family: helvetica;
+    font-weight: 100;
+	background-image:url(../img/BG_web.png);
+    background-repeat:no-repeat;
+}
+
+a{
+	color: #FFFFFF;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'canter';
+    src: url('../canter/canter-bold.otf#') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*************************************************************NAVI**********************************************************************/
+
+.navi{
+    width: 200px;
+    height: 50px; 
+    margin: 20px 0 0 350px;
+    position: fixed;
+}
+
+.navi p {
+    text-align: center;
+}
+
+#navi{
+    background: #ed9a3c;
+}
+
+#involved{
+    color: #fff;   
+}
+
+#navi2{
+    background: #fff;
+}
+
+#involved2{
+    color: #fff;   
+}
+
+#navi3{
+    background: #fff;
+}
+
+#involved3{
+    color: #fff;   
+}
+
+.nav{
+    width: 200px;
+    height: 50px;
+    margin: 20px 0 0 550px;
+    position: fixed;
+}
+
+.nav p{
+    text-align: center;   
+}
+
+#nav{
+    background: #fff;   
+}
+
+#damage{
+    color: #fff;
+}
+
+#nav2{
+    background: #ed9a3c;   
+}
+
+#damage2{
+    color: #fff;
+}
+
+#nav3{
+    background: #fff;   
+}
+
+#damage3{
+    color: #fff;
+}
+
+.nv{
+    width: 200px;
+    height: 50px;
+    margin: 20px 0 0 750px;
+    position: fixed; 
+}
+
+.nv p{
+    text-align: center;   
+}
+
+#nv{
+    background: #fff;   
+}
+
+#image{
+    color: #fff;   
+}
+
+#nv2{
+    background: #fff;   
+}
+
+#image2{
+    color: #fff;   
+}
+
+#nv3{
+    background: #ed9a3c;   
+}
+
+#image3{
+    color: #fff;   
+}
+
+/**************************************************************INDEX********************************************************************/
+#axa{
+    height: 100px;
+    width: 100px;
+    margin-left: -50px;
+}
+
+#tip{
+    color: white;
+    font-size: 1.5em;
+    margin: 200px 0 0 0;
+    text-align: center;
+    font-family: canter, Helvetica;
+    font-size: 40px;
+}
+
+#menuarrow{
+    height: 50px;
+    width: 50px;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    -webkit-transition:  left 0.4s ease-in-out;
+    -moz-transition:  left 0.4s ease-in-out;
+    -ms-transition:  left 0.4s ease-in-out;
+    -o-transition:  left 0.4s ease-in-out;
+    transition:  left 0.4s ease-in-out;
+}
+
+.container.open-sidebar {
+    left: 150px;
+}
+ 
+.swipe-area {
+    position: absolute;
+    width: 50px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 0;
+}
+
+#sidebar {
+    background: #ed9a3c;
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    left: -150px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+#sidebar ul {
+    margin-top: 280px;
+    padding: 0;
+    list-style: none;
+}
+#sidebar ul li {
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar ul li a {
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ed9a3c;
+    -webkit-transition:  background 0.3s ease-in-out;
+    -moz-transition:  background 0.3s ease-in-out;
+    -ms-transition:  background 0.3s ease-in-out;
+    -o-transition:  background 0.3s ease-in-out;
+    transition:  background 0.3s ease-in-out;
+}
+#sidebar ul li:hover a {
+    background: #1e2337;
+}
+.main-content {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+}
+
+.main-content .content{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding-left: 60px;
+    width: 100%;
+}
+
+a.svg:after {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+}
+
+a.svg {
+    position: fixed;
+    display: inline-block;
+}
+
+.main-content #sidebar-toggle {
+    background: #ed9a3c;
+    display: block;
+    position: relative;
+    margin-top: 300px;
+    margin-left: -10px;
+    float: left;
+}
+
+/*************************************************************HBO_VRAGENLIJST***********************************************************/
+.betrokkenen{
+    color: white;
+    font-size: 1.5em;
+    padding:150px 0 0 500px;
+    text-decoration: none;
+    position: fixed;
+    margin-top: 100px;
+}
+
+.betrokkenen a:hover{
+   color: #ed9a3c;
+}
+
+.content h1{
+    color: #ed9a3c;
+    position: fixed;
+    margin-left: 350px;
+    margin-top: 100px;
+    font-family: canter;
+    font-size: 40px;
+}
+
+/**************************************************************BESCHADIGD***************************************************************/
+.beschadigd{
+    width: 200px;
+    height: 200px;
+}
+
+#titleDamage{
+    margin-left: 370px;
+    font-size: 40px;
+}
+
+#motor{
+    position: fixed;
+    margin: 300px 0 0 350px;
+}
+
+#front{
+    width: 132px;
+    height: 132px;
+    position:fixed;
+    margin: 69px 0 0 300px;
+}
+
+#voorvork{
+    position:fixed;
+    margin: -41px 0 0 184px;
+    width: 190px;
+    height: 190px;
+}
+
+#moto{
+    position: fixed;
+    margin: 25px 0 0 129px;
+    width: 157px;
+    height: 137px;
+}
+
+#back{
+    position: fixed;
+    margin: -2px 0 0 5px;
+}
+
+/*********************************************************UPLOADPAGE********************************************************************/
+#picture{
+    margin: 170px 0 0 390px;
+    position: fixed;
+}
+
+#picture p{
+    position: fixed;
+    margin-left: -150px;
+}
+
+#send{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+}
+
+#sent{
+    margin-left: 600px;
+    margin-top: 100px;
+    height: 200px;
+    width: 200px;
+}
+
+#backbutton{
+    width: 100px;
+    height: 100px;
+}
+
+#bb{
+    width: 100px;
+    height:100px;
+    margin: 620px 0 0 100px;
+}
+
+#bb2{
+    width: 100px;
+    height:100px;
+    margin: 620px 0 0 -300px;
+}
+
+#textupload{
+    color: #ed9a3c;
+    font-size: 24px;
+    margin: -80px 0 0 10px;
+    position: fixed;
+        
+}
+
+#upload{
+    width: 300px;
+    margin-left: 23px;
+}
+
+/********************************************************LANDINFORMATIE*****************************************************************/
+#h1{
+    color: #ed9a3c;
+    position: fixed;
+    margin-left: 450px;
+
+}
+.wrapper-dropdown {
+    position: fixed;
+    width: 200px;
+    padding: 10px;
+    margin: 350px 0 0 455px;
+    background: #ed9a3c;
+    color: #fff;
+    outline: none;
+}
+
+.wrapper-dropdown:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -6px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent #fff; 
+}
+
+.wrapper-dropdown .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper-dropdown .dropdown li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.wrapper-dropdown .dropdown li:hover a {
+    background: #ed9a3c;
+}
+
+
+.wrapper-dropdown.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper-dropdown.active:after {
+    border-color: #ed9a3c transparent;
+    border-width: 6px 6px 0 6px ;
+    margin-top: -3px;
+}
+
+.wrapper-dropdown.active {
+    background: #ed9a3c;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ed9a3c), color-stop(78%,#ed9a3c), color-stop(78%,#ffffff), color-stop(100%,#ffffff))
+} 
+
+ #nextbutton{
+    width: 100px;
+    height: 100px;
+    float: right;
+    margin-top: 620px;
+    margin-left: 1000px;
+}
+
+/*******************************************************VEILIGHEIDSINFORMATIE***********************************************************/
+#icons{
+    height: 250px;
+    width: 250px;
+    float: right;
+    margin: 300px 0 0 410px;
+    position: fixed;
+}
+
+#sun{
+    width: 100px;
+    position: fixed;
+}
+
+#bycicle{
+    margin-left: 200px;
+    width: 100px;
+}
+
+#weather{
+    color: white;
+    position: fixed;
+    margin-top: 95px;
+    margin-left: 10px;
+}
+
+#roads{
+    color: white; 
+    position: fixed; 
+    margin-left: 200px;
+}
+.pop-up {
+    position:absolute;
+    top:0; 
+    left:-8000px;
+    color: #fff;
+}
+
+.pop-up:target {
+    position:static; 
+    left:0;
+}
+.popBox {
+    background:rgba(0,0,0,0.9);
+    position:absolute; 
+    left:30%; 
+    right:30%; 
+    top:30%; 
+    bottom:30%;
+    z-index:1;
+    border-radius:12px;
+    opacity:0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.popBox h2{
+    color: #ed9a3c;
+    font-family: canter;
+    font-size: 30px;
+}
+
+:target .popBox {
+    position:fixed; 
+    opacity:1;
+}
+
+.lightbox {
+    display:none; 
+    background:#000; 
+    opacity:0.4; 
+    width:100%; 
+    height:100%; 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    bottom:0; 
+    right:0;
+}
+
+:target .lightbox {
+    display:block
+}
+
+.close {
+    position:absolute; 
+    right: 0;
+    display:block; 
+    width:16px; 
+    height:16px;
+    text-align:center; 
+    text-decoration:none;
+    background:#000; 
+    color:#fff;
+}
+
+.close:before {
+    content:"x";
+}
+
+.close:hover {
+    background:#ed9a3c;
+}
+
+.close span {
+    text-indent:-3200px; 
+    display:block;
+}
+
+.popScroll {
+    position:absolute; 
+    top:9%; 
+    left:3%; 
+    right:3%; 
+    bottom:9%; 
+    overflow-y:auto; 
+    *overflow-y:scroll; 
+    padding-right:8px;
+}
+
+.faq{
+    float: right;
+    margin: 10px 0 0 0;
+    z-index: 1;
+}
+
+/******************************************************************FAQ******************************************************************/
+
+#topics{
+    color: #fff; 
+    float: left;
+    margin: 250px 0 0 300px;
+}
+
+#topics h1{
+    font-size: 70px;
+    margin: -200px 0 0 100px;
+    
+}
+
+#topics a{
+    color:  #ed9a3c;
+}
+
+#topics a:hover{
+    color: #fff;   
+}
+
+/**********************************************************VERZONDEN********************************************************************/
+
+.home{
+    position: fixed;
+    margin: 600px 0 0 200px;
+    font-size: 20px;
+}
+
+#verzonden{
+    position: fixed;
+    color: #fff; 
+    float: left;
+    margin: 300px 0 0 350px;
+    font-family: canter, helvetica;
+    font-size: 40px;
+}
+
+/****************************************************RESOLUTIE VOOR IPHONE**************************************************************/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : portrait) { 
+
+/***********************************************************GENERAL*********************************************************************/
+body, html{
+    height: 100%;
+    margin: 0;
+    overflow:hidden;
+    font-family: helvetica, Arial, sans-serif;
+    font-weight: 100;
+	background-image:url(../img/BG_webMobile.png);
+    background-repeat:no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+a{
+	color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+/*************************************************************NAVI**********************************************************************/
+
+.navi{
+    width: 200px;
+    height: 50px; 
+    margin: 20px 0 0 200px;
+    position: fixed;
+    border: 0px;
+}
+
+.navi p {
+    text-align: center;
+}
+
+#navi{
+    background: #ed9a3c;
+}
+
+#involved{
+    color: #fff;
+}
+
+#navi2{
+    background: #fff;
+}
+
+#involved2{
+    color: #fff;   
+}
+
+#navi3{
+    background: #fff;
+}
+
+#involved3{
+    color: #fff;   
+}
+
+.nav{
+    width: 200px;
+    height: 50px;
+    margin: 20px 0 0 400px;
+    position: fixed;
+}
+
+.nav p{
+    text-align: center;   
+}
+
+#nav{
+    background: #fff;   
+}
+
+#damage{
+    color: #fff;
+}
+
+#nav2{
+    background: #ed9a3c;   
+}
+
+#damage2{
+    color: #fff;
+}
+
+#nav3{
+    background: #fff;   
+}
+
+#damage3{
+    color: #fff;
+}
+
+.nv{
+    width: 200px;
+    height: 50px;
+    margin: 20px 0 0 600px;
+    position: fixed; 
+}
+
+.nv p{
+    text-align: center;   
+}
+
+#nv{
+    background: #fff;   
+}
+
+#image{
+    color: #fff;   
+}
+
+#nv2{
+    background: #fff;   
+}
+
+#image2{
+    color: #fff;   
+}
+
+#nv3{
+    background: #ed9a3c;   
+}
+
+#image3{
+    color: #fff;   
+}
+
+/**************************************************************INDEX********************************************************************/
+#axa{
+    height: 150px;
+    width: 150px;
+    margin-left: -100px;
+}
+
+#tip{
+    color: white;
+    font-size: 40px;
+    margin: 430px 0 0 -5px;
+    text-align: center;
+}
+
+#menuarrow{
+    height: 150px;
+    width: 150px;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    -webkit-transition:  left 0.4s ease-in-out;
+    -moz-transition:  left 0.4s ease-in-out;
+    -ms-transition:  left 0.4s ease-in-out;
+    -o-transition:  left 0.4s ease-in-out;
+    transition:  left 0.4s ease-in-out;
+}
+
+.container.open-sidebar {
+    left: 200px;
+}
+ 
+.swipe-area {
+    position: absolute;
+    width: 50px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 8;
+}
+
+#sidebar {
+    z-index: 8;
+    background: #ed9a3c;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    left: -200px;
+}
+
+#sidebar ul {
+    margin-top: 250px;
+    padding: 0;
+    list-style: none;
+    font-size: 20px;
+    z-index: 8;
+}
+#sidebar ul li {
+    margin: 0;
+    padding: 0;
+    z-index: 8;
+}
+
+#sidebar ul li a {
+    padding: 50px 0 50px 15px;
+    font-size: 30px;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+    display: block;
+    z-index: 8;
+    -webkit-transition:  background 0.3s ease-in-out;
+    -moz-transition:  background 0.3s ease-in-out;
+    -ms-transition:  background 0.3s ease-in-out;
+    -o-transition:  background 0.3s ease-in-out;
+    transition:  background 0.3s ease-in-out;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: relative;
+    z-index: 8;
+}
+
+.main-content .content{
+    padding-left: 60px;
+    width: 100%;
+    z-index: 8;
+}
+
+a.svg:after {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    z-index: 8;
+}
+
+a.svg {
+    position: fixed;
+    display: inline-block;
+    z-index: 8;
+}
+
+.main-content #sidebar-toggle {
+    background: #ed9a3c;
+    display: block;
+    position: relative;
+    margin-top: 400px;
+    margin-left: -12px;
+    float: left;
+    z-index: 8;
+}
+
+/*************************************************************HBO_VRAGENLIJST***********************************************************/
+.betrokkenen{
+    color: white;
+    font-size: 40px;
+    padding: 250px 0 0 200px;
+    margin-top: 180px;
+    margin-left: 130px;
+    text-decoration: none;
+    position: fixed;
+}
+
+.content h1{
+    color: #ed9a3c;
+    position: fixed;
+    margin-left: 50px;
+    font-size: 50px;
+}
+
+/**************************************************************BESCHADIGD***************************************************************/
+.beschadigd{
+    width: 300px;
+    height: 300px;
+    z-index: -8;
+    overflow: hidden;
+}
+
+#titleDamage{
+    margin-left: -10px;
+}
+
+#motor{
+    position: fixed;
+    margin: 400px 0 0 220px;
+    z-index = -8;
+}
+
+#front{
+    width: 202px;
+    height: 202px;
+    position:fixed;
+    margin: 128px 0 0 370px;
+    z-index: -8;
+}
+
+#voorvork{
+    position:fixed;
+    margin: -41px 0 0 194px;
+    width: 290px;
+    height: 290px;
+    z-index: -8;
+}
+
+#moto{
+    position: fixed;
+    margin: 54px 0 0 99px;
+    width: 257px;
+    height: 226px;
+    z-index: -8;
+}
+
+#back{
+    position: fixed;
+    margin: 24px 0 0 -72px;
+    width: 290px;
+    z-index: -8;
+}
+
+/*********************************************************UPLOADPAGE********************************************************************/
+#picture{
+    margin: 160px 0 0 200px;
+    position: fixed;
+}
+
+#picture p{
+    position: fixed; 
+    margin-left: -200px;
+    text-align: center;
+    z-index: -8;
+}
+
+#send{
+    position: fixed;
+    width: 350px;
+    height: 350px;
+}
+
+
+#sent{
+    margin-left: 400px; 
+    height: 3500px;
+    width: 350px;
+}
+
+#backbutton{
+    width: 220px;
+    height: 220px;
+    margin-top: 50px;
+}
+
+
+#bb{
+    width: 220px;
+    height: 220px;
+    margin: 875px 0 0 11px;
+}
+
+
+#textupload{
+    font-size: 34px;
+    position: fixed;
+    margin: -90px 50px 0 0;
+    color: #ed9a3c;
+        
+}
+
+#upload{
+    width: 500px;
+    margin-left: -40px;
+    margin-top: 70px;
+}
+
+/********************************************************LANDINFORMATIE*****************************************************************/
+#h1{
+    color: #ed9a3c;
+    font-size: 50px;
+    position: fixed;
+    margin-left: 200px;
+}
+.wrapper-dropdown {
+    position: fixed;
+    width: 250px;
+    padding: 10px;
+    margin: 400px 0 0 300px;
+    background: #ed9a3c;
+    color: #fff;
+    outline: none;
+    font-size: 40px;
+}
+
+.wrapper-dropdown:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -6px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent #fff; 
+}
+
+.wrapper-dropdown .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper-dropdown .dropdown li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.wrapper-dropdown .dropdown li:hover a {
+    background: #ed9a3c;
+}
+
+
+.wrapper-dropdown.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper-dropdown.active:after {
+    border-color: #ed9a3c transparent;
+    border-width: 6px 6px 0 6px ;
+    margin-top: -3px;
+}
+
+.wrapper-dropdown.active {
+    background: #ed9a3c;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ed9a3c), color-stop(78%,#ed9a3c), color-stop(78%,#ffffff), color-stop(100%,#ffffff))
+} 
+
+ #nextbutton{
+    width: 250px;
+    height: 250px;
+    float: right;
+    margin-top: 800px;
+    margin-left: 600px;
+}
+
+/*******************************************************VEILIGHEIDSINFORMATIE***********************************************************/
+#icons{
+    height: 350px;
+    width: 450px;
+    float: right;
+    margin: 280px 0 0 200px;
+    position: fixed;
+}
+
+#sun{
+    width: 200px;
+    position: fixed;
+}
+
+#bycicle{
+    margin-left: 350px;
+    width: 200px;
+}
+
+#weather{
+    color: white;
+    position: fixed;
+    margin-top: 180px;
+    margin-left: 50px;
+    font-size: 30px;
+}
+
+#roads{
+    color: white; 
+    position: fixed; 
+    margin-left: 330px;
+    font-size: 30px;
+}
+
+
+.pop-up {
+    position:absolute;
+    top:0; 
+    left:-8000px;
+    color: #fff;
+    font-size: 40px;
+}
+
+.pop-up:target {
+    position:static; 
+    left:0;
+}
+.popBox {
+    background:rgba(0,0,0,0.9);
+    position:absolute; 
+    left:30%; 
+    right:30%; 
+    top:30%; 
+    bottom:30%;
+    z-index:1;
+    border-radius:12px;
+    opacity:0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    width: 600px;
+}
+
+.popBox h2{
+    color: #ed9a3c;
+    margin-left: -12px;
+    margin-top: -30px;
+}
+
+:target .popBox {
+    position:fixed; 
+    opacity:1;
+}
+
+.lightbox {
+    display:none; 
+    background:#000; 
+    opacity:0.4; 
+    width:100%; 
+    height:100%; 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    bottom:0; 
+    right:0;
+}
+
+:target .lightbox {
+    display:block
+}
+
+.close {
+    position: absolute; 
+    right: 0;
+    display: block; 
+    width: 50px; 
+    height: 50px;
+    text-align: center; 
+    text-decoration: none;
+    background: #000; 
+    color: #fff;
+}
+
+.close:before {
+    content:"x";
+    font-size: 50px;
+}
+
+.close span {
+    text-indent:-3200px; 
+    display:block;
+}
+
+.popScroll {
+    position:absolute; 
+    top:9%; 
+    left:3%; 
+    right:3%; 
+    bottom:9%; 
+    overflow-y:auto; 
+    *overflow-y:scroll; 
+    padding-right:8px;
+}
+
+.faq{
+    float: right;
+    margin-top: -10px;
+    z-index: 1;
+}
+
+.popScroll h2{
+    margin-top: 10px; 
+    margin-left: 10px;
+}
+
+/*************************************************************FAQ***********************************************************************/
+
+#topics{
+    color: #fff; 
+    float: left;
+    margin: 200px 0 0 200px;
+    position: fixed;
+}
+
+#topics h1{
+    font-size: 70px;
+    margin: -200px 0 0 150px;
+    
+}
+
+#topics a{
+    color:  #ed9a3c; 
+    font-size: 30px;
+}
+
+#div-1{
+    width: 600px;
+}
+
+#div-2{
+    width: 600px;
+}
+
+#div-3{
+    width: 600px;
+}
+/**********************************************************VERZONDEN********************************************************************/
+
+.home{
+    position: fixed;
+    margin: 950px 0 0 100px;
+    font-size: 30px;
+}
+
+#verzonden{
+    position: fixed;
+    color: #fff; 
+    float: left;
+    margin: 300px 0 0 200px;
+    font-family: canter, helvetica;
+    font-size: 40px;
+}
